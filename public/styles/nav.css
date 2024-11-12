@@ -9,19 +9,19 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-nav > span{
+nav > span.tweeter-logo{
   font-family: "Bungee", sans-serif;
 }
-nav a{
+nav a.new-tweet{
   color: #fff;
   text-decoration: none;
   font-weight: 300;
   text-align: center;
 }
-nav a span{
+nav a.new-tweet span{
   font-weight: 600;
 }
-nav a i.fa-solid{
+nav a.new-tweet i.fa-solid{
   display: block;
   color: #f12;
   margin-top: 5px;
