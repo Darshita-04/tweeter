@@ -6,6 +6,7 @@ header {
   justify-content: center;
   flex-direction: column;
   padding: 1.5rem 1em;
+  width: 100%;
 }
 header h2{
   font-weight: 600;
