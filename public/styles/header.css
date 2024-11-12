@@ -1,0 +1,16 @@
+/* nav style */
+header {
+  background: url(../images/arches.png) #f6e6ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 1em;
+}
+header h2{
+  font-weight: 600;
+  margin-bottom: 0;
+}
+header h2 span {
+  font-weight: 300;
+}
