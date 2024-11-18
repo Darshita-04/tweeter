@@ -73,6 +73,22 @@ $(document).ready(function(){
     // to prevent loading the page on form submit
     e.preventDefault();
 
+    // get tweet content
+    const tweetContent = $('#tweet-text').val().trim();
+
+   // validate the tweet
+    if (!tweetContent) {
+      // Tweet is empty
+      alert('Error: Your tweet cannot be empty!');
+      return;
+    }
+
+    if (tweetContent.length > 140) {
+      // Tweet exceeds max length
+      alert('Error: Your tweet is too long! Maximum 140 characters allowed.');
+      return;
+    }
+
     // serialize form data
     const formData = $(this).serialize();
 
@@ -83,7 +99,9 @@ $(document).ready(function(){
       data: formData,
       success: function (response) {
         // Handle success
-        console.log(JSON.stringify(response))
+        $('#tweet-text').val("");
+        console.log(JSON.stringify(response));
+        loadtweets();
       },
       error: function (jqXHR, textStatus, errorThrown) {
         // Handle error
