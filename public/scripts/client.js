@@ -52,7 +52,7 @@ $(document).ready(function(){
                       <p>${object.content.text}</p>
                     </div>
                     <footer>
-                      <div class="created_at">${object.created_at}</div>
+                      <div class="created_at">${timeago.format(object.created_at)}</div>
                       <div class="tweet-options">
                         <a href="#"><i class="fa-solid fa-flag"></i></a>
                         <a href="#"><i class="fa-solid fa-retweet"></i></a>
@@ -64,9 +64,9 @@ $(document).ready(function(){
     return $tweet;
   }
 
-  renderTweets(data);
+  //renderTweets(data);
 
-  // ADDING NEW TWEET (form submission) 
+  // adding new tweet (form submission) 
 
   $("#newTweet").on("submit", function(e){
 
@@ -91,4 +91,23 @@ $(document).ready(function(){
       }
     });
   })
+
+  // Fetching tweets 
+
+  const loadtweets = function() {
+    $.ajax({
+      url: '/tweets/', // Replace with your endpoint
+      type: 'GET',
+      success: function (response) {
+        // Handle success
+        renderTweets(response);
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        // Handle error
+        console.error('Error:', textStatus, errorThrown);
+      }
+    });
+  }
+
+  loadtweets();
 })
