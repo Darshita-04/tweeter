@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <!-- new tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -46,14 +48,17 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor atque commodi esse aut corrupti deserunt dignissimos fuga ipsam cupiditate.
-      </p>
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quam laborum quibusdam!</h2>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis neque odit deleniti ullam. Rem saepe iste commodi, quam maxime labore accusamus aliquam. Atque saepe laboriosam nemo veritatis. Animi voluptates at voluptatum optio magnam iste ratione odit possimus accusantium doloremque obcaecati delectus accusamus est, minus doloribus hic dolore ut vero beatae in magni ullam dolor! Aperiam voluptatum eius eligendi dicta officia. Ratione, numquam itaque labore beatae mollitia odio delectus quasi molestias corrupti consectetur tenetur! Quis, officiis modi molestiae a voluptatem magni. Ipsum deserunt saepe ex, nam et commodi qui ab consequatur asperiores, numquam iste pariatur magnam dolor deleniti voluptatem quibusdam! Iusto tenetur facere nisi adipisci architecto eveniet vel perspiciatis unde quia commodi. Sunt esse repellendus harum eaque cumque numquam asperiores excepturi aspernatur quibusdam quo, iste dolor incidunt perspiciatis aut. Aperiam cum quo reprehenderit eveniet nulla quis laudantium repellat quae veniam nostrum ratione commodi possimus dignissimos, excepturi quasi quod magnam et. Inventore hic doloribus saepe ducimus fuga aliquam eligendi nostrum, modi eaque, eveniet commodi aut blanditiis nemo obcaecati dignissimos provident repellat voluptas iste eum itaque corrupti vitae. Eum rem accusamus mollitia necessitatibus obcaecati, iste illum dicta. Nostrum cupiditate fuga ipsa impedit eaque ea officiis esse similique ipsam, facilis minus. Eveniet, illo molestias!
-      </p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets/" method="POST">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="d-flex justify-content-between">
+            <button type="submit" class="btn-tweet">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
