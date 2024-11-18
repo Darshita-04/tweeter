@@ -1,5 +1,5 @@
 /* nav style */
-header {
+nav + header {
   background: url(../images/arches.png) #f6e6ba;
   display: flex;
   align-items: center;
@@ -8,10 +8,10 @@ header {
   padding: 1.5rem 1em;
   width: 100%;
 }
-header h2{
+nav + header h2{
   font-weight: 600;
   margin-bottom: 0;
 }
-header h2 span {
+nav + header h2 span {
   font-weight: 300;
 }

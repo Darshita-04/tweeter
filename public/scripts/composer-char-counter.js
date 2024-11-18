@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#tweet-text").on("input", function(){   
+  $("#tweet-text").on("keyup", function(){   
     
     const counter = $(this).siblings(".compose-tweet-footer").find(".counter");
     const btnTweet = $(this).siblings(".compose-tweet-footer").find(".btn-tweet");
