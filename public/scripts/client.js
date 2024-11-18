@@ -65,4 +65,30 @@ $(document).ready(function(){
   }
 
   renderTweets(data);
+
+  // ADDING NEW TWEET (form submission) 
+
+  $("#newTweet").on("submit", function(e){
+
+    // to prevent loading the page on form submit
+    e.preventDefault();
+
+    // serialize form data
+    const formData = $(this).serialize();
+
+    // send data via AJAX POST
+    $.ajax({
+      url: '/tweets/', // Replace with your endpoint
+      type: 'POST',
+      data: formData,
+      success: function (response) {
+        // Handle success
+        console.log(JSON.stringify(response))
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        // Handle error
+        console.error('Error:', textStatus, errorThrown);
+      }
+    });
+  })
 })
