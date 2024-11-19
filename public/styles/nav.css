@@ -16,16 +16,17 @@ nav {
 nav > span.tweeter-logo{
   font-family: "Bungee", sans-serif;
 }
-nav a.new-tweet{
+nav a.btn-new-tweet{
   color: #fff;
   text-decoration: none;
   font-weight: 300;
   text-align: center;
+  padding: 15px;
 }
-nav a.new-tweet span{
+nav a.btn-new-tweet span{
   font-weight: 600;
 }
-nav a.new-tweet i.fa-solid{
+nav a.btn-new-tweet i.fa-solid{
   display: block;
   color: #f12;
   margin-top: 5px;

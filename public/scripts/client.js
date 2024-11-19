@@ -96,6 +96,16 @@ $(document).ready(function(){
   $(".alert-close").on("click", function(){
     $(this).closest(".tweet-error").slideUp();
   });
+
+
+  // toggle compose tweet
+
+  $(".btn-new-tweet").on("click", function(){
+    $(".new-tweet").slideToggle();
+  });
+
+
+
   // adding new tweet (form submission) 
 
   $("#newTweet").on("submit", function(e){

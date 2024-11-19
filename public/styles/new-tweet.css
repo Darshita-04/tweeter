@@ -1,3 +1,6 @@
+.new-tweet{
+  display: none;
+}
 #tweet-text{
   width: 100%;
   background-color: transparent;
