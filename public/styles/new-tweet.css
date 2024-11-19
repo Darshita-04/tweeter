@@ -30,3 +30,23 @@
 .counter.error{
   color: #f12;
 }
+.tweet-error {
+  background: #f12;
+  margin-bottom: 35px;
+  transition: all 0.3s ease-in;
+  display: none;
+  color: #fff;
+  padding: 15px 20px;
+  position: relative;
+}
+.tweet-error::before {
+  content: "\f071";
+  font-family: 'FontAwesome';
+  margin-right: 10px;
+}
+.alert-close {
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+}

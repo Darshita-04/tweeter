@@ -76,19 +76,26 @@ $(document).ready(function(){
   const isTweetValid = function(input) {
     if (!input) {
       // Tweet is empty
-      alert('Error: Your tweet cannot be empty!');
+      $(".tweet-error").find("span").text("Your tweet cannot be empty!");
+      $(".tweet-error").slideDown();
       return false;
     }
 
     if (input.length > 140) {
       // Tweet exceeds max length
-      alert('Error: Your tweet is too long! Maximum 140 characters allowed.');
+      $(".tweet-error").find("span").text("Your tweet is too long! Maximum 140 characters allowed.");
+      $(".tweet-error").slideDown();
       return false;
     }
 
     return true;
-  }
+  };
 
+  // closing error 
+
+  $(".alert-close").on("click", function(){
+    $(this).closest(".tweet-error").slideUp();
+  });
   // adding new tweet (form submission) 
 
   $("#newTweet").on("submit", function(e){
@@ -96,6 +103,7 @@ $(document).ready(function(){
     // to prevent loading the page on form submit
     e.preventDefault();
 
+    $(".tweet-error").slideUp();
     // get tweet content
     const tweetContent = $('#tweet-text').val().trim();
 
