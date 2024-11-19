@@ -66,6 +66,24 @@ $(document).ready(function(){
 
   //renderTweets(data);
 
+  // form validation
+
+  const isTweetValid = function(input) {
+    if (!input) {
+      // Tweet is empty
+      alert('Error: Your tweet cannot be empty!');
+      return false;
+    }
+
+    if (input.length > 140) {
+      // Tweet exceeds max length
+      alert('Error: Your tweet is too long! Maximum 140 characters allowed.');
+      return false;
+    }
+
+    return true;
+  }
+
   // adding new tweet (form submission) 
 
   $("#newTweet").on("submit", function(e){
@@ -76,19 +94,11 @@ $(document).ready(function(){
     // get tweet content
     const tweetContent = $('#tweet-text').val().trim();
 
-   // validate the tweet
-    if (!tweetContent) {
-      // Tweet is empty
-      alert('Error: Your tweet cannot be empty!');
+    // validate the tweet
+
+    if (!isTweetValid(tweetContent)) {
       return;
     }
-
-    if (tweetContent.length > 140) {
-      // Tweet exceeds max length
-      alert('Error: Your tweet is too long! Maximum 140 characters allowed.');
-      return;
-    }
-
     // serialize form data
     const formData = $(this).serialize();
 
