@@ -32,9 +32,12 @@ nav a.btn-new-tweet i.fa-solid{
   margin-top: 5px;
 }
 .scrool-to-top {
+  display: none;
+}
+.scrool-to-top i{
   width: 50px;
   height: 50px;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -46,7 +49,6 @@ nav a.btn-new-tweet i.fa-solid{
   color: #fff;
   text-decoration: none;
   font-size: 20px;
-  opacity: 0;
   transition: all 0.3s ease-in;
 }
 .scrool-to-top:hover{

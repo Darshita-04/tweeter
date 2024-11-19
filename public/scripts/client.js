@@ -172,10 +172,10 @@ $(document).ready(function(){
     let scrollTop = $(window).scrollTop();
     if(scrollTop > 10) {
       $(".btn-new-tweet").fadeOut();
-      $(".scrool-to-top").css({"display":"flex","opacity":1});
+      $(".scrool-to-top").fadeIn();
     } else{
       $(".btn-new-tweet").fadeIn();
-      $(".scrool-to-top").css({"display":"none","opacity":0});
+      $(".scrool-to-top").fadeOut();
     }
   })
 })
