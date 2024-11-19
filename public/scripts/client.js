@@ -34,7 +34,7 @@ $(document).ready(function(){
 
   const renderTweets = function(tweets) {
     for(let tweet of tweets) { // loops through tweets
-      $('#tweets-container').append(createTweetElement(tweet)); // calls createTweetElement for each tweet & takes return value and appends it to the tweets container
+      $('#tweets-container').prepend(createTweetElement(tweet)); // calls createTweetElement for each tweet & takes return value and appends it to the tweets container
     }    
   }
 
@@ -115,7 +115,7 @@ $(document).ready(function(){
       },
       error: function (jqXHR, textStatus, errorThrown) {
         // Handle error
-        console.error('Error:', textStatus, errorThrown);
+        alert('Error:', textStatus, errorThrown);
       }
     });
   })
@@ -132,7 +132,7 @@ $(document).ready(function(){
       },
       error: function (jqXHR, textStatus, errorThrown) {
         // Handle error
-        console.error('Error:', textStatus, errorThrown);
+        alert('Error:', textStatus, errorThrown);
       }
     });
   }
