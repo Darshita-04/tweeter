@@ -91,20 +91,6 @@ $(document).ready(function(){
     return true;
   };
 
-  // closing error 
-
-  $(".alert-close").on("click", function(){
-    $(this).closest(".tweet-error").slideUp();
-  });
-
-
-  // toggle compose tweet
-
-  $(".btn-new-tweet").on("click", function(){
-    $(".new-tweet").slideToggle();
-  });
-
-
 
   // adding new tweet (form submission) 
 
@@ -161,4 +147,35 @@ $(document).ready(function(){
   }
 
   loadtweets();
+
+  // closing error 
+
+  $(".alert-close").on("click", function(){
+    $(this).closest(".tweet-error").slideUp();
+  });
+
+
+  // toggle compose tweet
+
+  $(".btn-new-tweet").on("click", function(){
+    $(".new-tweet").slideToggle();
+    $("#tweet-text").focus();
+  });
+  $(".scrool-to-top").on("click", function(){
+    $(".new-tweet").slideDown();
+    $("#tweet-text").focus();
+  });
+
+  // sroll to top
+  
+  $(window).on("scroll", function(){
+    let scrollTop = $(window).scrollTop();
+    if(scrollTop > 10) {
+      $(".btn-new-tweet").fadeOut();
+      $(".scrool-to-top").css({"display":"flex","opacity":1});
+    } else{
+      $(".btn-new-tweet").fadeIn();
+      $(".scrool-to-top").css({"display":"none","opacity":0});
+    }
+  })
 })
