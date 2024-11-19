@@ -33,6 +33,7 @@ $(document).ready(function(){
   ]
 
   const renderTweets = function(tweets) {
+    $('#tweets-container').empty(); // clear the tweet container
     for(let tweet of tweets) { // loops through tweets
       $('#tweets-container').prepend(createTweetElement(tweet)); // calls createTweetElement for each tweet & takes return value and appends it to the tweets container
     }    
