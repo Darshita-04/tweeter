@@ -3,7 +3,8 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -43,33 +44,35 @@
       <a href="#" class="btn-new-tweet"><span>Write</span> a new tweet <i class="fa-solid fa-angles-down"></i></a>
     </nav>
 
-    <header>
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <div>
-        <h2>Darshita <span>Patel</span></h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="tweet-error">
-          <span>error</span>
-          <a href="#" class="alert-close"><i class="fa-solid fa-xmark"></i></a>
+    <div class="wrapper">
+      <header>
+        <div>
+          <img src="/images/profile-hex.png">
         </div>
-        <form id="newTweet">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="d-flex justify-content-between compose-tweet-footer">
-            <button type="submit" class="btn-tweet">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+        <div>
+          <h2>Darshita <span>Patel</span></h2>
+        </div>
+      </header>
+  
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="tweet-error">
+            <span>error</span>
+            <a href="#" class="alert-close"><i class="fa-solid fa-xmark"></i></a>
           </div>
-        </form>
-      </section>
-      <section id="tweets-container"></section>
-      <a href="#" class="scrool-to-top"><i class="fa-solid fa-angles-up"></i></a>
-    </main>
+          <form id="newTweet">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="d-flex justify-content-between compose-tweet-footer">
+              <button type="submit" class="btn-tweet">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+        <a href="#" class="scrool-to-top"><i class="fa-solid fa-angles-up"></i></a>
+      </main>
+    </div>
   </body>
 </html>

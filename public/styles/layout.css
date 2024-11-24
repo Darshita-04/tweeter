@@ -31,5 +31,18 @@ body {
   width: 90%;
   margin: 0 auto;
   background-color: inherit;
-  padding-top: 80px;
+ }
+
+ /* wrapper */
+ @media (min-width:1024px) {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+    padding: 80px 40px;
+  }
+  .container {
+    width: 50%;
+    margin: 0;
+  }
  }

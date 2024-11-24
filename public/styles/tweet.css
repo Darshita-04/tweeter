@@ -1,7 +1,7 @@
 article.tweet {
   border: 3px solid #333;
   padding: 15px;
-  margin: 30px 0;
+  margin: 0 0 30px;
   transition: all 0.3s ease-in;
 }
 article.tweet:hover {
@@ -42,4 +42,46 @@ article.tweet .tweet-options a {
 }
 article.tweet .tweet-options a:hover {
   color: #dda548;
+}
+
+/* media query */
+@media (max-width:420px) {
+  body {
+    font-size: 20px;
+    padding-top: 80px;
+  }
+  nav {
+    height: 80px;
+    padding: 0 1rem;
+  }
+  nav a.btn-new-tweet {
+    padding: 0;
+  }
+  nav a.btn-new-tweet i.fa-solid {
+    display: none;
+  }
+  .wrapper > header img {
+    width: 200px;
+  }
+  .wrapper > header h2 {
+    font-size: 28px;
+    margin-top: 16px;
+  }
+  article.tweet header .user-profile img {
+    width: 40px;
+  }
+  article.tweet header .user-name,
+  article.tweet header .user-handle,
+  .tweet-body {
+    font-size: 20px;
+  }
+  article.tweet {
+    border: 2px solid #333;
+    padding: 10px;
+    margin: 0 0 20px;
+  }
+  article.tweet footer {
+    border-top: 2px solid #333;
+    font-size: 16px;
+  }
 }

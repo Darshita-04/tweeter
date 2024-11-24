@@ -1,5 +1,5 @@
 /* nav style */
-nav + header {
+.wrapper > header {
   background: url(../images/arches.png) #f6e6ba;
   display: flex;
   align-items: center;
@@ -7,11 +7,20 @@ nav + header {
   flex-direction: column;
   padding: 1.5rem 1em;
   width: 100%;
+  margin-bottom: 60px;
 }
-nav + header h2{
+.wrapper > header h2{
   font-weight: 600;
   margin-bottom: 0;
 }
-nav + header h2 span {
+.wrapper > header h2 span {
   font-weight: 300;
 }
+
+
+@media (min-width:1024px) {
+  .wrapper > header {
+    width: 30%;
+    height: 400px;
+  }
+ }

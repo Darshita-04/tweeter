@@ -1,5 +1,6 @@
 .new-tweet{
   display: none;
+  margin-bottom: 30px;
 }
 #tweet-text{
   width: 100%;
