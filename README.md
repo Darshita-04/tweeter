@@ -6,9 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## UI
 
-!["Compose Tweet"](https://raw.githubusercontent.com/Darshita-04/tinyapp/master/docs/tweet-box.png)
-!["Tweet list"](https://raw.githubusercontent.com/Darshita-04/tinyapp/master/docs/tweet-list.png)
-!["Tweet Mobile view"](https://raw.githubusercontent.com/Darshita-04/tinyapp/master/docs/tweet-mobile-view.png)
+!["Compose Tweet"](https://raw.githubusercontent.com/Darshita-04/tweeter/master/docs/tweet-box.png)
+!["Tweet list"](https://raw.githubusercontent.com/Darshita-04/tweeter/master/docs/tweet-list.png)
+!["Tweet Mobile view"](https://raw.githubusercontent.com/Darshita-04/tweeter/master/docs/tweet-mobile-view.png)
 
 
 ## Getting Started
