@@ -1,0 +1,25 @@
+/* nav style */
+.wrapper > header {
+  background: url(../images/arches.png) #f6e6ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 1em;
+  width: 100%;
+  margin-bottom: 60px;
+  h2{
+    font-weight: 600;
+    margin-bottom: 0;
+    span {
+      font-weight: 300;
+    }    
+  }
+}
+
+@media (min-width:1024px) {
+  .wrapper > header {
+    width: 30%;
+    height: 400px;
+  }
+ }

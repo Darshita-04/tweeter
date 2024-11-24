@@ -9,7 +9,7 @@
   width: 100%;
   margin-bottom: 60px;
 }
-.wrapper > header h2{
+.wrapper > header h2 {
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -17,10 +17,9 @@
   font-weight: 300;
 }
 
-
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .wrapper > header {
     width: 30%;
     height: 400px;
   }
- }
+}
